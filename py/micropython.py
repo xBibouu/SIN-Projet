@@ -26,7 +26,6 @@ print("Connecté au réseau Wi-Fi")
 url = "http://172.17.112.127:3000"
 
 while True:
-    try:
         response = urequests.get(url)
         data = response.json()
         ouvrir = data['ouvrir']
@@ -53,6 +52,6 @@ while True:
             servoDroite.duty(130)
         if droite == 1:
             servoGauche.duty(21)
-    except Exception as e:
-        print("Erreur lors de la récupération des données:", e)
+
+
         
