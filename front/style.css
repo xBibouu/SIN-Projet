@@ -12,7 +12,7 @@ div.contenu {
 .boutons-container {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Espacement entre les boutons */
+    gap: 50px;
 }
 
 .direction-container {
@@ -35,8 +35,8 @@ div.contenu {
     font-size: 30px;
     padding: 10px;
     margin: 5px;
-    width: 60px; /* Ajustez la taille si nécessaire */
-    height: 60px; /* Ajustez la taille si nécessaire */
+    width: 60px; 
+    height: 60px; 
 }
 
 .direction:hover {
