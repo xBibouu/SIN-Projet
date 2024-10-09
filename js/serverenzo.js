@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.post('/update-ouvrir', (req, res) => {
     if (req.body.moteurouvrir !== undefined) {
         fermer = 0;
-        ouvrir = req.body.moteurouvrir;
+        ouvrir = 1;
         res.send({ moteurfermer: fermer, moteurouvrir: ouvrir });
     } else {
         res.status(400).send({ success: false, message: 'Invalid input' });
@@ -32,7 +32,7 @@ app.post('/update-ouvrir', (req, res) => {
 app.post('/update-fermer', (req, res) => {
     if (req.body.moteurfermer !== undefined) {
         ouvrir = 0;
-        fermer = req.body.moteurfermer;
+        fermer = 1;
         res.send({ moteurfermer: fermer, moteurouvrir: ouvrir });
     } else {
         res.status(400).send({ success: false, message: 'Invalid input' });
@@ -41,7 +41,7 @@ app.post('/update-fermer', (req, res) => {
 
 app.post('/update-lancer', (req, res) => {
     if (req.body.moteurlancer !== undefined) {
-        lancer = req.body.moteurlancer;
+        lancer = 1;
         res.send({ moteurlancer: lancer });
     } else {
         res.status(400).send({ success: false, message: 'Invalid input' });
